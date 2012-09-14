@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		571A21851601D9020010D422 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A21841601D9020010D422 /* QuartzCore.framework */; };
+		571A21871601D9020010D422 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A21861601D9020010D422 /* OpenGLES.framework */; };
+		571A21891601D9020010D422 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A21881601D9020010D422 /* OpenAL.framework */; };
+		571A218B1601D9020010D422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A218A1601D9020010D422 /* AudioToolbox.framework */; };
+		571A218D1601D9020010D422 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A218C1601D9020010D422 /* AVFoundation.framework */; };
+		571A218F1601D9020010D422 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A218E1601D9020010D422 /* UIKit.framework */; };
+		571A21911601D9020010D422 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A21901601D9020010D422 /* Foundation.framework */; };
+		571A21931601D9020010D422 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571A21921601D9020010D422 /* CoreGraphics.framework */; };
+		574D4AF41602063400B6DD0E /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574D4AF01602063400B6DD0E /* AppDelegate.cpp */; };
+		574D4AF51602063400B6DD0E /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574D4AF21602063400B6DD0E /* HelloWorldScene.cpp */; };
+		574D4B051602063C00B6DD0E /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AF81602063C00B6DD0E /* CloseNormal.png */; };
+		574D4B061602063C00B6DD0E /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AF91602063C00B6DD0E /* CloseSelected.png */; };
+		574D4B071602063C00B6DD0E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AFA1602063C00B6DD0E /* Default.png */; };
+		574D4B081602063C00B6DD0E /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AFB1602063C00B6DD0E /* fps_images-hd.png */; };
+		574D4B091602063C00B6DD0E /* fps_images-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AFC1602063C00B6DD0E /* fps_images-ipadhd.png */; };
+		574D4B0A1602063C00B6DD0E /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AFD1602063C00B6DD0E /* fps_images.png */; };
+		574D4B0B1602063C00B6DD0E /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AFE1602063C00B6DD0E /* HelloWorld.png */; };
+		574D4B0C1602063C00B6DD0E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4AFF1602063C00B6DD0E /* Icon-72.png */; };
+		574D4B0D1602063C00B6DD0E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4B001602063C00B6DD0E /* Icon-Small-50.png */; };
+		574D4B0E1602063C00B6DD0E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4B011602063C00B6DD0E /* Icon-Small.png */; };
+		574D4B0F1602063C00B6DD0E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4B021602063C00B6DD0E /* Icon-Small@2x.png */; };
+		574D4B101602063C00B6DD0E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4B031602063C00B6DD0E /* Icon.png */; };
+		574D4B111602063C00B6DD0E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 574D4B041602063C00B6DD0E /* Icon@2x.png */; };
+		574D4B1B1602065C00B6DD0E /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 574D4B1A1602065000B6DD0E /* libcocos2dx.a */; };
+		574D4B221602068800B6DD0E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B1E1602068800B6DD0E /* AppController.mm */; };
+		574D4B231602068800B6DD0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B1F1602068800B6DD0E /* main.m */; };
+		574D4B241602068800B6DD0E /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B211602068800B6DD0E /* RootViewController.mm */; };
+		574D4BAF160207F600B6DD0E /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B4C160207F600B6DD0E /* CDAudioManager.m */; };
+		574D4BB0160207F600B6DD0E /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B4F160207F600B6DD0E /* CDOpenALSupport.m */; };
+		574D4BB1160207F600B6DD0E /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B51160207F600B6DD0E /* CocosDenshion.m */; };
+		574D4BB2160207F600B6DD0E /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B52160207F600B6DD0E /* SimpleAudioEngine.mm */; };
+		574D4BB3160207F600B6DD0E /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 574D4B54160207F600B6DD0E /* SimpleAudioEngine_objc.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		574D4B191602065000B6DD0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 574D4B121602065000B6DD0E /* cocos2dx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1551A33F158F2AB200E66CFE;
+			remoteInfo = cocos2dx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		571A21801601D9020010D422 /* GameComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		571A21841601D9020010D422 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		571A21861601D9020010D422 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		571A21881601D9020010D422 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		571A218A1601D9020010D422 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		571A218C1601D9020010D422 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		571A218E1601D9020010D422 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		571A21901601D9020010D422 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		571A21921601D9020010D422 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		574D4AF01602063400B6DD0E /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
+		574D4AF11602063400B6DD0E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		574D4AF21602063400B6DD0E /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
+		574D4AF31602063400B6DD0E /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		574D4AF81602063C00B6DD0E /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
+		574D4AF91602063C00B6DD0E /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
+		574D4AFA1602063C00B6DD0E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		574D4AFB1602063C00B6DD0E /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
+		574D4AFC1602063C00B6DD0E /* fps_images-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-ipadhd.png"; sourceTree = "<group>"; };
+		574D4AFD1602063C00B6DD0E /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
+		574D4AFE1602063C00B6DD0E /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
+		574D4AFF1602063C00B6DD0E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		574D4B001602063C00B6DD0E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		574D4B011602063C00B6DD0E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		574D4B021602063C00B6DD0E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		574D4B031602063C00B6DD0E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		574D4B041602063C00B6DD0E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		574D4B121602065000B6DD0E /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
+		574D4B1D1602068800B6DD0E /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		574D4B1E1602068800B6DD0E /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
+		574D4B1F1602068800B6DD0E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		574D4B201602068800B6DD0E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		574D4B211602068800B6DD0E /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
+		574D4B48160207F600B6DD0E /* Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Export.h; sourceTree = "<group>"; };
+		574D4B49160207F600B6DD0E /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
+		574D4B4B160207F600B6DD0E /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
+		574D4B4C160207F600B6DD0E /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
+		574D4B4D160207F600B6DD0E /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
+		574D4B4E160207F600B6DD0E /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
+		574D4B4F160207F600B6DD0E /* CDOpenALSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOpenALSupport.m; sourceTree = "<group>"; };
+		574D4B50160207F600B6DD0E /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
+		574D4B51160207F600B6DD0E /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
+		574D4B52160207F600B6DD0E /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
+		574D4B53160207F600B6DD0E /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
+		574D4B54160207F600B6DD0E /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		571A217D1601D9020010D422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574D4B1B1602065C00B6DD0E /* libcocos2dx.a in Frameworks */,
+				571A21851601D9020010D422 /* QuartzCore.framework in Frameworks */,
+				571A21871601D9020010D422 /* OpenGLES.framework in Frameworks */,
+				571A21891601D9020010D422 /* OpenAL.framework in Frameworks */,
+				571A218B1601D9020010D422 /* AudioToolbox.framework in Frameworks */,
+				571A218D1601D9020010D422 /* AVFoundation.framework in Frameworks */,
+				571A218F1601D9020010D422 /* UIKit.framework in Frameworks */,
+				571A21911601D9020010D422 /* Foundation.framework in Frameworks */,
+				571A21931601D9020010D422 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		571A21751601D9010010D422 = {
+			isa = PBXGroup;
+			children = (
+				574D4B121602065000B6DD0E /* cocos2dx.xcodeproj */,
+				574D4AEF1602063400B6DD0E /* Classes */,
+				571A21831601D9020010D422 /* Frameworks */,
+				574D4B1C1602066300B6DD0E /* ios */,
+				574D4B31160207F600B6DD0E /* CocosDenshion */,
+				574D4AF71602063C00B6DD0E /* Resources */,
+				571A21811601D9020010D422 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		571A21811601D9020010D422 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				571A21801601D9020010D422 /* GameComponents.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		571A21831601D9020010D422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				571A21841601D9020010D422 /* QuartzCore.framework */,
+				571A21861601D9020010D422 /* OpenGLES.framework */,
+				571A21881601D9020010D422 /* OpenAL.framework */,
+				571A218A1601D9020010D422 /* AudioToolbox.framework */,
+				571A218C1601D9020010D422 /* AVFoundation.framework */,
+				571A218E1601D9020010D422 /* UIKit.framework */,
+				571A21901601D9020010D422 /* Foundation.framework */,
+				571A21921601D9020010D422 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		574D4AEF1602063400B6DD0E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				574D4AF01602063400B6DD0E /* AppDelegate.cpp */,
+				574D4AF11602063400B6DD0E /* AppDelegate.h */,
+				574D4AF21602063400B6DD0E /* HelloWorldScene.cpp */,
+				574D4AF31602063400B6DD0E /* HelloWorldScene.h */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		574D4AF71602063C00B6DD0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				574D4AF81602063C00B6DD0E /* CloseNormal.png */,
+				574D4AF91602063C00B6DD0E /* CloseSelected.png */,
+				574D4AFA1602063C00B6DD0E /* Default.png */,
+				574D4AFB1602063C00B6DD0E /* fps_images-hd.png */,
+				574D4AFC1602063C00B6DD0E /* fps_images-ipadhd.png */,
+				574D4AFD1602063C00B6DD0E /* fps_images.png */,
+				574D4AFE1602063C00B6DD0E /* HelloWorld.png */,
+				574D4AFF1602063C00B6DD0E /* Icon-72.png */,
+				574D4B001602063C00B6DD0E /* Icon-Small-50.png */,
+				574D4B011602063C00B6DD0E /* Icon-Small.png */,
+				574D4B021602063C00B6DD0E /* Icon-Small@2x.png */,
+				574D4B031602063C00B6DD0E /* Icon.png */,
+				574D4B041602063C00B6DD0E /* Icon@2x.png */,
+			);
+			name = Resources;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		574D4B131602065000B6DD0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				574D4B1A1602065000B6DD0E /* libcocos2dx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		574D4B1C1602066300B6DD0E /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				574D4B1F1602068800B6DD0E /* main.m */,
+				574D4B1D1602068800B6DD0E /* AppController.h */,
+				574D4B1E1602068800B6DD0E /* AppController.mm */,
+				574D4B201602068800B6DD0E /* RootViewController.h */,
+				574D4B211602068800B6DD0E /* RootViewController.mm */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
+		574D4B31160207F600B6DD0E /* CocosDenshion */ = {
+			isa = PBXGroup;
+			children = (
+				574D4B47160207F600B6DD0E /* include */,
+				574D4B4A160207F600B6DD0E /* ios */,
+			);
+			name = CocosDenshion;
+			path = ../../CocosDenshion;
+			sourceTree = "<group>";
+		};
+		574D4B47160207F600B6DD0E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				574D4B48160207F600B6DD0E /* Export.h */,
+				574D4B49160207F600B6DD0E /* SimpleAudioEngine.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		574D4B4A160207F600B6DD0E /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				574D4B4B160207F600B6DD0E /* CDAudioManager.h */,
+				574D4B4C160207F600B6DD0E /* CDAudioManager.m */,
+				574D4B4D160207F600B6DD0E /* CDConfig.h */,
+				574D4B4E160207F600B6DD0E /* CDOpenALSupport.h */,
+				574D4B4F160207F600B6DD0E /* CDOpenALSupport.m */,
+				574D4B50160207F600B6DD0E /* CocosDenshion.h */,
+				574D4B51160207F600B6DD0E /* CocosDenshion.m */,
+				574D4B52160207F600B6DD0E /* SimpleAudioEngine.mm */,
+				574D4B53160207F600B6DD0E /* SimpleAudioEngine_objc.h */,
+				574D4B54160207F600B6DD0E /* SimpleAudioEngine_objc.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		571A217F1601D9020010D422 /* GameComponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571A24091601D9070010D422 /* Build configuration list for PBXNativeTarget "GameComponents" */;
+			buildPhases = (
+				571A217C1601D9020010D422 /* Sources */,
+				571A217D1601D9020010D422 /* Frameworks */,
+				571A217E1601D9020010D422 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameComponents;
+			productName = GameComponents;
+			productReference = 571A21801601D9020010D422 /* GameComponents.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		571A21771601D9010010D422 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 571A217A1601D9010010D422 /* Build configuration list for PBXProject "GameComponents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 571A21751601D9010010D422;
+			productRefGroup = 571A21811601D9020010D422 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 574D4B131602065000B6DD0E /* Products */;
+					ProjectRef = 574D4B121602065000B6DD0E /* cocos2dx.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				571A217F1601D9020010D422 /* GameComponents */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		574D4B1A1602065000B6DD0E /* libcocos2dx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2dx.a;
+			remoteRef = 574D4B191602065000B6DD0E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		571A217E1601D9020010D422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574D4B051602063C00B6DD0E /* CloseNormal.png in Resources */,
+				574D4B061602063C00B6DD0E /* CloseSelected.png in Resources */,
+				574D4B071602063C00B6DD0E /* Default.png in Resources */,
+				574D4B081602063C00B6DD0E /* fps_images-hd.png in Resources */,
+				574D4B091602063C00B6DD0E /* fps_images-ipadhd.png in Resources */,
+				574D4B0A1602063C00B6DD0E /* fps_images.png in Resources */,
+				574D4B0B1602063C00B6DD0E /* HelloWorld.png in Resources */,
+				574D4B0C1602063C00B6DD0E /* Icon-72.png in Resources */,
+				574D4B0D1602063C00B6DD0E /* Icon-Small-50.png in Resources */,
+				574D4B0E1602063C00B6DD0E /* Icon-Small.png in Resources */,
+				574D4B0F1602063C00B6DD0E /* Icon-Small@2x.png in Resources */,
+				574D4B101602063C00B6DD0E /* Icon.png in Resources */,
+				574D4B111602063C00B6DD0E /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		571A217C1601D9020010D422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574D4AF41602063400B6DD0E /* AppDelegate.cpp in Sources */,
+				574D4AF51602063400B6DD0E /* HelloWorldScene.cpp in Sources */,
+				574D4B221602068800B6DD0E /* AppController.mm in Sources */,
+				574D4B231602068800B6DD0E /* main.m in Sources */,
+				574D4B241602068800B6DD0E /* RootViewController.mm in Sources */,
+				574D4BAF160207F600B6DD0E /* CDAudioManager.m in Sources */,
+				574D4BB0160207F600B6DD0E /* CDOpenALSupport.m in Sources */,
+				574D4BB1160207F600B6DD0E /* CocosDenshion.m in Sources */,
+				574D4BB2160207F600B6DD0E /* SimpleAudioEngine.mm in Sources */,
+				574D4BB3160207F600B6DD0E /* SimpleAudioEngine_objc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		571A24071601D9070010D422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"COCOS2D_DEBUG=1",
+					USE_FILE32API,
+					TARGET_OS_IPHONE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(PROJECT_NAME)/libs/cocos2dx/kazmath/include\"",
+					"\"$(PROJECT_NAME)/libs/cocos2dx\"",
+					"\"$(PROJECT_NAME)/libs/CocosDenshion/include\"",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		571A24081601D9070010D422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					USE_FILE32API,
+					TARGET_OS_IPHONE,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(PROJECT_NAME)/libs/cocos2dx/kazmath/include\"",
+					"\"$(PROJECT_NAME)/libs/cocos2dx\"",
+					"\"$(PROJECT_NAME)/libs/CocosDenshion/include\"",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		571A240A1601D9070010D422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					"\"$(SRCROOT)/../../cocos2dx/include\"",
+					"\"$(SRCROOT)/../../cocos2dx\"",
+					"\"$(SRCROOT)/../../cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../cocos2dx/kazmath/include\"",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/armle-v7\"",
+					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/x86\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 armv7 i386";
+				WARNING_LDFLAGS = "-lxml2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		571A240B1601D9070010D422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					"\"$(SRCROOT)/../../cocos2dx/include\"",
+					"\"$(SRCROOT)/../../cocos2dx\"",
+					"\"$(SRCROOT)/../../cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../cocos2dx/kazmath/include\"",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/armle-v7\"",
+					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/x86\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv6 armv7 i386";
+				WARNING_LDFLAGS = "-lxml2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		571A217A1601D9010010D422 /* Build configuration list for PBXProject "GameComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571A24071601D9070010D422 /* Debug */,
+				571A24081601D9070010D422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571A24091601D9070010D422 /* Build configuration list for PBXNativeTarget "GameComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571A240A1601D9070010D422 /* Debug */,
+				571A240B1601D9070010D422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 571A21771601D9010010D422 /* Project object */;
+}

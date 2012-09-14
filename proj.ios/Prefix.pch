@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'sdfsdfsdsd' target in the 'sdfsdfsdsd' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
