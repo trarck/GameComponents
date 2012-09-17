@@ -3,10 +3,17 @@
 
 #include "cocos2d.h"
 
-class Component : public cocos2d::CCLayer
+NS_CC_BEGIN
+
+class Component : public CCObject
 {
 public:
     virtual bool init();  
+	
+	virtual CCObject* getOwner();
+	virtual setOwner(CCObject* owner);
 };
+
+NS_CC_END
 
 #endif // __Component_H__
