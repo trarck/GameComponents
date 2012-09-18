@@ -1,8 +1,8 @@
 //
 //  main.m
-//  sdfsdfsdsd
+//  GameComponents
 //
-//  Created by duanhouhai on 12-9-13.
+//  Created by duanhouhai on 12-9-18.
 //  Copyright __MyCompanyName__ 2012年. All rights reserved.
 //
 
