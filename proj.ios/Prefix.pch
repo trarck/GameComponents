@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'sdfsdfsdsd' target in the 'sdfsdfsdsd' project
+// Prefix header for all source files of the 'GameComponents' target in the 'GameComponents' project
 //
 
 #ifdef __OBJC__

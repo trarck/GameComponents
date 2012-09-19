@@ -1,11 +1,3 @@
-//
-//  sdfsdfsdsdAppDelegate.cpp
-//  sdfsdfsdsd
-//
-//  Created by duanhouhai on 12-9-13.
-//  Copyright __MyCompanyName__ 2012年. All rights reserved.
-//
-
 #include "AppDelegate.h"
 
 #include "cocos2d.h"

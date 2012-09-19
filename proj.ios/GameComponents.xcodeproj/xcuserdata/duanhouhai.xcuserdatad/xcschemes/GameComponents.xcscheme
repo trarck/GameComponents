@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "571A217F1601D9020010D422"
+               BlueprintIdentifier = "5763BF991608554E0068D420"
                BuildableName = "GameComponents.app"
                BlueprintName = "GameComponents"
                ReferencedContainer = "container:GameComponents.xcodeproj">
@@ -31,7 +31,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "571A217F1601D9020010D422"
+            BlueprintIdentifier = "5763BF991608554E0068D420"
             BuildableName = "GameComponents.app"
             BlueprintName = "GameComponents"
             ReferencedContainer = "container:GameComponents.xcodeproj">
@@ -50,7 +50,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "571A217F1601D9020010D422"
+            BlueprintIdentifier = "5763BF991608554E0068D420"
             BuildableName = "GameComponents.app"
             BlueprintName = "GameComponents"
             ReferencedContainer = "container:GameComponents.xcodeproj">
@@ -68,7 +68,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "571A217F1601D9020010D422"
+            BlueprintIdentifier = "5763BF991608554E0068D420"
             BuildableName = "GameComponents.app"
             BlueprintName = "GameComponents"
             ReferencedContainer = "container:GameComponents.xcodeproj">
