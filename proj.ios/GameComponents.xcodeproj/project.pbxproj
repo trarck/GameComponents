@@ -36,6 +36,18 @@
 		5763C2E01608570A0068D420 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5763C2801608570A0068D420 /* CocosDenshion.m */; };
 		5763C2E11608570A0068D420 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5763C2811608570A0068D420 /* SimpleAudioEngine.mm */; };
 		5763C2E21608570A0068D420 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5763C2831608570A0068D420 /* SimpleAudioEngine_objc.m */; };
+		5791DDD81609703E00D996E9 /* AttackComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDD31609703E00D996E9 /* AttackComponent.cpp */; };
+		5791DDD91609703E00D996E9 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDD51609703E00D996E9 /* Component.cpp */; };
+		5791DDE5160982EE00D996E9 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDE3160982EE00D996E9 /* Player.cpp */; };
+		5791DDF416098BC800D996E9 /* CCCompleteMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDE716098BC800D996E9 /* CCCompleteMessageManager.cpp */; };
+		5791DDF516098BC800D996E9 /* CCMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDEA16098BC800D996E9 /* CCMessage.cpp */; };
+		5791DDF616098BC800D996E9 /* CCMessageHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDEC16098BC800D996E9 /* CCMessageHandler.cpp */; };
+		5791DDF716098BC800D996E9 /* CCMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDEE16098BC800D996E9 /* CCMessageManager.cpp */; };
+		5791DDF816098BC800D996E9 /* CCNormalMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDF016098BC800D996E9 /* CCNormalMessageManager.cpp */; };
+		5791DDF916098BC800D996E9 /* CCSimpleMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDF216098BC800D996E9 /* CCSimpleMessageManager.cpp */; };
+		5791DE181609B7AE00D996E9 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDE0160982C200D996E9 /* GameEntity.cpp */; };
+		57CAC2261609CC2600B21CC3 /* GameEntity2.h in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC2251609CC2600B21CC3 /* GameEntity2.h */; };
+		57CAC22B1609DF0700B21CC3 /* CCSpecMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +109,35 @@
 		5763C2811608570A0068D420 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
 		5763C2821608570A0068D420 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		5763C2831608570A0068D420 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+		5791DDD31609703E00D996E9 /* AttackComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackComponent.cpp; sourceTree = "<group>"; };
+		5791DDD41609703E00D996E9 /* AttackComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackComponent.h; sourceTree = "<group>"; };
+		5791DDD51609703E00D996E9 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
+		5791DDD61609703E00D996E9 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		5791DDDA160979FE00D996E9 /* YHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHMacros.h; sourceTree = "<group>"; };
+		5791DDE0160982C200D996E9 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEntity.cpp; sourceTree = "<group>"; };
+		5791DDE1160982C200D996E9 /* GameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity.h; sourceTree = "<group>"; };
+		5791DDE3160982EE00D996E9 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		5791DDE4160982EE00D996E9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		5791DDE716098BC800D996E9 /* CCCompleteMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCCompleteMessageManager.cpp; sourceTree = "<group>"; };
+		5791DDE816098BC800D996E9 /* CCCompleteMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCompleteMessageManager.h; sourceTree = "<group>"; };
+		5791DDE916098BC800D996E9 /* CCIMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCIMessageManager.h; sourceTree = "<group>"; };
+		5791DDEA16098BC800D996E9 /* CCMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMessage.cpp; sourceTree = "<group>"; };
+		5791DDEB16098BC800D996E9 /* CCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessage.h; sourceTree = "<group>"; };
+		5791DDEC16098BC800D996E9 /* CCMessageHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMessageHandler.cpp; sourceTree = "<group>"; };
+		5791DDED16098BC800D996E9 /* CCMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessageHandler.h; sourceTree = "<group>"; };
+		5791DDEE16098BC800D996E9 /* CCMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMessageManager.cpp; sourceTree = "<group>"; };
+		5791DDEF16098BC800D996E9 /* CCMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMessageManager.h; sourceTree = "<group>"; };
+		5791DDF016098BC800D996E9 /* CCNormalMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCNormalMessageManager.cpp; sourceTree = "<group>"; };
+		5791DDF116098BC800D996E9 /* CCNormalMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNormalMessageManager.h; sourceTree = "<group>"; };
+		5791DDF216098BC800D996E9 /* CCSimpleMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSimpleMessageManager.cpp; sourceTree = "<group>"; };
+		5791DDF316098BC800D996E9 /* CCSimpleMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSimpleMessageManager.h; sourceTree = "<group>"; };
+		5791DE141609935600D996E9 /* GameMessages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMessages.h; sourceTree = "<group>"; };
+		5791DE151609A30F00D996E9 /* ComponentEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentEntity.h; sourceTree = "<group>"; };
+		5791DE161609A37B00D996E9 /* ComponentEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentEntity.cpp; sourceTree = "<group>"; };
+		57CAC2251609CC2600B21CC3 /* GameEntity2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity2.h; sourceTree = "<group>"; };
+		57CAC2271609CC4D00B21CC3 /* GameEntity2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEntity2.cpp; sourceTree = "<group>"; };
+		57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSpecMessageManager.cpp; sourceTree = "<group>"; };
+		57CAC22A1609DF0600B21CC3 /* CCSpecMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpecMessageManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,10 +220,15 @@
 		5763C244160856DB0068D420 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5791DDE616098BC700D996E9 /* Message */,
+				5791DDDF160982C200D996E9 /* Entities */,
+				5791DDD01609703E00D996E9 /* Components */,
 				5763C245160856DB0068D420 /* AppDelegate.cpp */,
 				5763C246160856DB0068D420 /* AppDelegate.h */,
 				5763C247160856DB0068D420 /* HelloWorldScene.cpp */,
 				5763C248160856DB0068D420 /* HelloWorldScene.h */,
+				5791DDDA160979FE00D996E9 /* YHMacros.h */,
+				5791DE141609935600D996E9 /* GameMessages.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -240,6 +286,55 @@
 				5763C2831608570A0068D420 /* SimpleAudioEngine_objc.m */,
 			);
 			path = ios;
+			sourceTree = "<group>";
+		};
+		5791DDD01609703E00D996E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5791DDD31609703E00D996E9 /* AttackComponent.cpp */,
+				5791DDD41609703E00D996E9 /* AttackComponent.h */,
+				5791DDD51609703E00D996E9 /* Component.cpp */,
+				5791DDD61609703E00D996E9 /* Component.h */,
+				5791DE151609A30F00D996E9 /* ComponentEntity.h */,
+				5791DE161609A37B00D996E9 /* ComponentEntity.cpp */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5791DDDF160982C200D996E9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5791DDE3160982EE00D996E9 /* Player.cpp */,
+				5791DDE4160982EE00D996E9 /* Player.h */,
+				5791DDE0160982C200D996E9 /* GameEntity.cpp */,
+				5791DDE1160982C200D996E9 /* GameEntity.h */,
+				57CAC2271609CC4D00B21CC3 /* GameEntity2.cpp */,
+				57CAC2251609CC2600B21CC3 /* GameEntity2.h */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5791DDE616098BC700D996E9 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */,
+				57CAC22A1609DF0600B21CC3 /* CCSpecMessageManager.h */,
+				5791DDE716098BC800D996E9 /* CCCompleteMessageManager.cpp */,
+				5791DDE816098BC800D996E9 /* CCCompleteMessageManager.h */,
+				5791DDE916098BC800D996E9 /* CCIMessageManager.h */,
+				5791DDEA16098BC800D996E9 /* CCMessage.cpp */,
+				5791DDEB16098BC800D996E9 /* CCMessage.h */,
+				5791DDEC16098BC800D996E9 /* CCMessageHandler.cpp */,
+				5791DDED16098BC800D996E9 /* CCMessageHandler.h */,
+				5791DDEE16098BC800D996E9 /* CCMessageManager.cpp */,
+				5791DDEF16098BC800D996E9 /* CCMessageManager.h */,
+				5791DDF016098BC800D996E9 /* CCNormalMessageManager.cpp */,
+				5791DDF116098BC800D996E9 /* CCNormalMessageManager.h */,
+				5791DDF216098BC800D996E9 /* CCSimpleMessageManager.cpp */,
+				5791DDF316098BC800D996E9 /* CCSimpleMessageManager.h */,
+			);
+			name = Message;
+			path = ../../CCLibs/Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +414,7 @@
 				5763C25D160856E20068D420 /* Icon-Small@2x.png in Resources */,
 				5763C25E160856E20068D420 /* Icon.png in Resources */,
 				5763C25F160856E20068D420 /* Icon@2x.png in Resources */,
+				57CAC2261609CC2600B21CC3 /* GameEntity2.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +435,17 @@
 				5763C2E01608570A0068D420 /* CocosDenshion.m in Sources */,
 				5763C2E11608570A0068D420 /* SimpleAudioEngine.mm in Sources */,
 				5763C2E21608570A0068D420 /* SimpleAudioEngine_objc.m in Sources */,
+				5791DDD81609703E00D996E9 /* AttackComponent.cpp in Sources */,
+				5791DDD91609703E00D996E9 /* Component.cpp in Sources */,
+				5791DDE5160982EE00D996E9 /* Player.cpp in Sources */,
+				5791DDF416098BC800D996E9 /* CCCompleteMessageManager.cpp in Sources */,
+				5791DDF516098BC800D996E9 /* CCMessage.cpp in Sources */,
+				5791DDF616098BC800D996E9 /* CCMessageHandler.cpp in Sources */,
+				5791DDF716098BC800D996E9 /* CCMessageManager.cpp in Sources */,
+				5791DDF816098BC800D996E9 /* CCNormalMessageManager.cpp in Sources */,
+				5791DDF916098BC800D996E9 /* CCSimpleMessageManager.cpp in Sources */,
+				5791DE181609B7AE00D996E9 /* GameEntity.cpp in Sources */,
+				57CAC22B1609DF0700B21CC3 /* CCSpecMessageManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,16 +529,14 @@
 					"\"$(SRCROOT)/../../cocos2dx/include\"",
 					"\"$(SRCROOT)/../../CocosDenshion/include\"",
 					"\"$(SRCROOT)/../../cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../CCLibs/Message\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/armle-v7\"",
-					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/x86\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-lz",
+					"-v",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -455,16 +560,14 @@
 					"\"$(SRCROOT)/../../cocos2dx/include\"",
 					"\"$(SRCROOT)/../../CocosDenshion/include\"",
 					"\"$(SRCROOT)/../../cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../CCLibs/Message\"",
 				);
 				INFOPLIST_FILE = Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/armle-v7\"",
-					"\"$(SRCROOT)/../../CocosDenshion/third_party/blackberry/libraries/x86\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-lxml2",
 					"-lz",
+					"-v",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
