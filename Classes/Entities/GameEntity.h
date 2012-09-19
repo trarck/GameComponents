@@ -25,6 +25,7 @@ public:
     void registerMessage(MessageType type,SEL_MessageHandler handle , CCObject* sender);
     void unregisterMessage(MessageType type ,SEL_MessageHandler handle ,CCObject* sender);
     void sendMessage(MessageType type ,CCObject* receiver ,CCDictionary* data);
+	void cleanupMessages();
     
     //components
     virtual void setupComponents();

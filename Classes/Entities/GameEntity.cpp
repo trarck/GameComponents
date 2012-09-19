@@ -1,4 +1,4 @@
-#include "CCCompleteMessageManager.h"
+#include "CCMessageManager.h"
 #include "GameEntity.h"
 
 NS_CC_BEGIN
@@ -43,19 +43,23 @@ void GameEntity::guid(int guid)
 
 void GameEntity::registerMessage(MessageType type,SEL_MessageHandler handle , CCObject* sender)
 {
-    CCCompleteMessageManager::sharedCompleteMessageManager()->registerReceiver(this,handle,type,sender);
+    CCMessageManager::sharedMessageManager()->registerReceiver(this,handle,type,sender);
 }
 
 void GameEntity::unregisterMessage(MessageType type ,SEL_MessageHandler handle ,CCObject* sender)
 {
-    CCCompleteMessageManager::sharedCompleteMessageManager()->removeReceiver(this,handle,type,sender);
+    CCMessageManager::sharedMessageManager()->removeReceiver(this,type,sender,handle);
 }
 
 void GameEntity::sendMessage(MessageType type ,CCObject* receiver ,CCDictionary* data)
 {
-    CCCompleteMessageManager::sharedCompleteMessageManager()->dispatchMessageWithType(type,this,receiver,data);
+    CCMessageManager::sharedMessageManager()->dispatchMessageWithType(type,this,receiver,data);
 }
 
+void GameEntity::cleanupMessages()
+{
+    CCMessageManager::sharedMessageManager()->removeReceiver(this);
+}
 
 void GameEntity::setupComponents()
 {
