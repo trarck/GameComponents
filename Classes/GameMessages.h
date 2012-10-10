@@ -14,7 +14,8 @@ enum GameMessage
 {
     ALL=0,
     //attack
-    ATTACK=10
+    ATTACK=10,
+    DIE=20
 };
 
 

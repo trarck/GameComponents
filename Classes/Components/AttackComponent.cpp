@@ -53,14 +53,14 @@ bool AttackComponent::registerOwnerMessages()
     CCLOG("AttackComponent::registerOwnerMessages");
     CCAssert(m_owner!=NULL, "the owner is null for registerOwnerMessages");
     
-    CCMessageManager::sharedMessageManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), ATTACK, NULL);
+    CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), ATTACK, NULL);
     
     return true;
 }
 
 void AttackComponent::cleanupMessages()
 {
-    CCMessageManager::sharedMessageManager()->removeReceiver(this);
+    CCMessageManager::defaultManager()->removeReceiver(this);
 }
 
 
@@ -114,7 +114,7 @@ void AttackComponent::setTarget(GameEntity* target)
     CC_SAFE_RELEASE(m_target);
     m_target=target;
 
-	CCMessageManager::sharedMessageManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), DIE, m_target);
+	CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), DIE, m_target);
 }
 
 float AttackComponent::getAttackSpeed()

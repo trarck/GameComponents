@@ -43,22 +43,22 @@ void GameEntity::guid(int guid)
 
 void GameEntity::registerMessage(MessageType type,SEL_MessageHandler handle , CCObject* sender)
 {
-    CCMessageManager::sharedMessageManager()->registerReceiver(this,handle,type,sender);
+    CCMessageManager::defaultManager()->registerReceiver(this,handle,type,sender);
 }
 
 void GameEntity::unregisterMessage(MessageType type ,SEL_MessageHandler handle ,CCObject* sender)
 {
-    CCMessageManager::sharedMessageManager()->removeReceiver(this,type,sender,handle);
+    CCMessageManager::defaultManager()->removeReceiver(this,type,sender,handle);
 }
 
 void GameEntity::sendMessage(MessageType type ,CCObject* receiver ,CCDictionary* data)
 {
-    CCMessageManager::sharedMessageManager()->dispatchMessageWithType(type,this,receiver,data);
+    CCMessageManager::defaultManager()->dispatchMessageWithType(type,this,receiver,data);
 }
 
 void GameEntity::cleanupMessages()
 {
-    CCMessageManager::sharedMessageManager()->removeReceiver(this);
+    CCMessageManager::defaultManager()->removeReceiver(this);
 }
 
 void GameEntity::setupComponents()
