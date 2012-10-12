@@ -45,15 +45,7 @@ bool AttackComponent::registerMessages()
 {
     CCLOG("AttackComponent::registerMessages");
     
-    return true;
-}
-
-bool AttackComponent::registerOwnerMessages()
-{
-    CCLOG("AttackComponent::registerOwnerMessages");
-    CCAssert(m_owner!=NULL, "the owner is null for registerOwnerMessages");
-    
-    CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), ATTACK, NULL);
+    CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), ATTACK, m_owner);
     
     return true;
 }

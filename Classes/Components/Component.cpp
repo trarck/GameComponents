@@ -33,12 +33,12 @@ bool Component::registerMessages()
     return true;
 }
 
-bool Component::registerOwnerMessages()
-{
-    CCLOG("Component::registerOwnerMessages");
-  
-    return true;
-}
+//bool Component::registerOwnerMessages()
+//{
+//    CCLOG("Component::registerOwnerMessages");
+//  
+//    return true;
+//}
 
 void Component::cleanupMessages()
 {

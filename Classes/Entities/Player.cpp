@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "AttackComponent.h"
-
+#include "GameMessages.h"
 
 NS_CC_BEGIN
 
@@ -25,10 +25,16 @@ void Player::setupComponents()
     attackComponent->init();
     attackComponent->setOwner(this);
     CCLOG("attackComponent count=%d",attackComponent->retainCount());
-    attackComponent->registerOwnerMessages();
-    
+    attackComponent->registerMessages();
     CCLOG("attackComponent count=%d",attackComponent->retainCount());
+    
     addComponent(attackComponent);
+    CCLOG("attackComponent count=%d",attackComponent->retainCount());
+    
+    CCLOG("send attack message");
+    sendMessage(ATTACK, NULL, NULL);
+    
+    
     attackComponent->release();
     CCLOG("attackComponent count=%d",attackComponent->retainCount());
 }

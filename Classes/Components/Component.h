@@ -17,7 +17,7 @@ public:
     virtual bool init(void);  
     
     virtual bool registerMessages();
-    virtual bool registerOwnerMessages();
+//    virtual bool registerOwnerMessages();
     virtual void handleMessage(CCMessage* message);
 	virtual void cleanupMessages();
     //使用GameEntity也没有意义，具体还要使用强制类型转换
