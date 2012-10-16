@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57584246162D1B85008DA210 /* Monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57584244162D1B85008DA210 /* Monster.cpp */; };
+		57584249162D3884008DA210 /* AutoAttackComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57584247162D3884008DA210 /* AutoAttackComponent.cpp */; };
+		5758424C162D39A0008DA210 /* ManualAttackComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5758424A162D39A0008DA210 /* ManualAttackComponent.cpp */; };
 		5763BF9F1608554E0068D420 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763BF9E1608554E0068D420 /* QuartzCore.framework */; };
 		5763BFA11608554E0068D420 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763BFA01608554E0068D420 /* OpenGLES.framework */; };
 		5763BFA31608554E0068D420 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5763BFA21608554E0068D420 /* OpenAL.framework */; };
@@ -68,6 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57584244162D1B85008DA210 /* Monster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Monster.cpp; sourceTree = "<group>"; };
+		57584245162D1B85008DA210 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
+		57584247162D3884008DA210 /* AutoAttackComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AutoAttackComponent.cpp; sourceTree = "<group>"; };
+		57584248162D3884008DA210 /* AutoAttackComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoAttackComponent.h; sourceTree = "<group>"; };
+		5758424A162D39A0008DA210 /* ManualAttackComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ManualAttackComponent.cpp; sourceTree = "<group>"; };
+		5758424B162D39A0008DA210 /* ManualAttackComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManualAttackComponent.h; sourceTree = "<group>"; };
 		5763BF9A1608554E0068D420 /* GameComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5763BF9E1608554E0068D420 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5763BFA01608554E0068D420 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -291,6 +300,10 @@
 		5791DDD01609703E00D996E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5758424A162D39A0008DA210 /* ManualAttackComponent.cpp */,
+				5758424B162D39A0008DA210 /* ManualAttackComponent.h */,
+				57584247162D3884008DA210 /* AutoAttackComponent.cpp */,
+				57584248162D3884008DA210 /* AutoAttackComponent.h */,
 				5791DDD31609703E00D996E9 /* AttackComponent.cpp */,
 				5791DDD41609703E00D996E9 /* AttackComponent.h */,
 				5791DDD51609703E00D996E9 /* Component.cpp */,
@@ -304,6 +317,8 @@
 		5791DDDF160982C200D996E9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				57584244162D1B85008DA210 /* Monster.cpp */,
+				57584245162D1B85008DA210 /* Monster.h */,
 				5791DDE3160982EE00D996E9 /* Player.cpp */,
 				5791DDE4160982EE00D996E9 /* Player.h */,
 				5791DDE0160982C200D996E9 /* GameEntity.cpp */,
@@ -446,6 +461,9 @@
 				5791DDF916098BC800D996E9 /* CCSimpleMessageManager.cpp in Sources */,
 				5791DE181609B7AE00D996E9 /* GameEntity.cpp in Sources */,
 				57CAC22B1609DF0700B21CC3 /* CCSpecMessageManager.cpp in Sources */,
+				57584246162D1B85008DA210 /* Monster.cpp in Sources */,
+				57584249162D3884008DA210 /* AutoAttackComponent.cpp in Sources */,
+				5758424C162D39A0008DA210 /* ManualAttackComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

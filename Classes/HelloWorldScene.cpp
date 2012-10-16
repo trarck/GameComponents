@@ -2,6 +2,8 @@
 #include "SimpleAudioEngine.h"
 #include "Player.h"
 #include "GameMessages.h"
+#include "CCMessageManager.h"
+#include "AttackComponent.h"
 
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -54,9 +56,22 @@ bool HelloWorld::init()
     player->init();
     player->setupComponents();
     
-    player->sendMessage(ATTACK, NULL, NULL);
+    GameEntity* target=new GameEntity();
+    target->setHp(10);
     
+    player->sendMessage(SET_ATTACK_TARGET, NULL, target);
+    
+    CCLOG("send attack message");
+    
+    CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player);
+    
+//    AttackComponent* attackComponent=(AttackComponent*)player->getComponent("AttackComponent");
+    
+    target->release();
+    player->cleanupMessages();
     player->release();
+    
+//    CCLOG("attackComponent count=%d",attackComponent->retainCount());
     return true;
 }
 

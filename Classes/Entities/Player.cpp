@@ -31,10 +31,7 @@ void Player::setupComponents()
     addComponent(attackComponent);
     CCLOG("attackComponent count=%d",attackComponent->retainCount());
     
-    CCLOG("send attack message");
-    sendMessage(ATTACK, NULL, NULL);
-    
-    
+   
     attackComponent->release();
     CCLOG("attackComponent count=%d",attackComponent->retainCount());
 }

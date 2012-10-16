@@ -5,8 +5,7 @@
 NS_CC_BEGIN
 
 AttackComponent::AttackComponent()
-:m_target(NULL),
-m_attackSpeed(2)
+:m_target(NULL)
 {
     CCLOG("AttackComponent create");
     m_name="AttackComponent";
@@ -32,11 +31,14 @@ void AttackComponent::handleMessage(CCMessage *message)
 	switch(message->getType()){
 		
 		case ATTACK:
-			startAttack();
+			attack();
 			break;
 		case DIE:
-			stopAttack();
+            didTargetDie();
 			break;
+        case SET_ATTACK_TARGET:
+            setTarget((GameEntity*)message->getObjectData());
+            break;
 
 	}
 }
@@ -45,7 +47,9 @@ bool AttackComponent::registerMessages()
 {
     CCLOG("AttackComponent::registerMessages");
     
-    CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), ATTACK, m_owner);
+    CCMessageManager::defaultManager()->registerReceiver(m_owner, message_selector(AttackComponent::handleMessage), SET_ATTACK_TARGET, NULL,this);
+    
+    CCMessageManager::defaultManager()->registerReceiver(m_owner, message_selector(AttackComponent::handleMessage), ATTACK, NULL,this);
     
     return true;
 }
@@ -57,35 +61,16 @@ void AttackComponent::cleanupMessages()
 
 
 
-void AttackComponent::startAttack()
+void AttackComponent::attack()
 {
     CCLOG("AttackComponent::startAttack");
-	if (m_target) {
-        CCDirector* director = CCDirector::sharedDirector();
-        CCScheduler* pScheduler = director->getScheduler();
-        pScheduler->scheduleSelector(schedule_selector(AttackComponent::updateAttack),this, m_attackSpeed, false);
-	}
+    int targetHp=m_target->getHp();
+    CCLOG("current target hp %d after attack %d",targetHp,targetHp-1);
+    m_target->setHp(targetHp-1);
+
 }
 
-void AttackComponent::stopAttack()
-{
-    CCLOG("AttackComponent::stopAttack");
-    CCDirector* director = CCDirector::sharedDirector();
-    CCScheduler* pScheduler = director->getScheduler();
-    pScheduler->unscheduleSelector(schedule_selector(AttackComponent::updateAttack),this);
-}
 
-void AttackComponent::updateAttack(float delta)
-{
-    CCLOG("AttackComponent::updateAttack");
-	//check attack stop
-	/*
-	 1.target die
-	 2.if use skill, mp less then the skill requirement
-
-	 */
-	//--m_target.hp;
-}
 
 void AttackComponent::attackWithSkillId(int skillId)
 {
@@ -93,6 +78,11 @@ void AttackComponent::attackWithSkillId(int skillId)
 	//		//攻击动作
 	//		//攻击效果
 	//	}
+}
+
+void AttackComponent::didTargetDie()
+{
+    CCLOG("target is die");
 }
 
 GameEntity* AttackComponent::getTarget()
@@ -107,16 +97,6 @@ void AttackComponent::setTarget(GameEntity* target)
     m_target=target;
 
 	CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), DIE, m_target);
-}
-
-float AttackComponent::getAttackSpeed()
-{
-	return m_attackSpeed;
-}
-
-void AttackComponent::setAttackSpeed(float attackSpeed)
-{
-	m_attackSpeed=attackSpeed;
 }
 
 NS_CC_END

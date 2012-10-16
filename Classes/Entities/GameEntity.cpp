@@ -1,5 +1,6 @@
 #include "CCMessageManager.h"
 #include "GameEntity.h"
+#include "GameMessages.h"
 
 NS_CC_BEGIN
 
@@ -15,6 +16,12 @@ GameEntity::GameEntity()
 GameEntity::~GameEntity()
 {
     CCLOG("GameEntity destroy");
+    
+    CCDictElement* pElement = NULL;
+    CCDICT_FOREACH(m_components,pElement){
+        Component* component=(Component*)pElement->getObject();
+        component->cleanupMessages();
+    }
     CC_SAFE_RELEASE(m_components);
 }
 
@@ -56,6 +63,16 @@ void GameEntity::sendMessage(MessageType type ,CCObject* receiver ,CCDictionary*
     CCMessageManager::defaultManager()->dispatchMessageWithType(type,this,receiver,data);
 }
 
+void GameEntity::sendMessage(MessageType type ,CCObject* receiver ,CCObject* data)
+{
+    CCMessageManager::defaultManager()->dispatchMessageWithType(type,this,receiver,data);
+}
+
+void GameEntity::sendMessage(MessageType type ,CCObject* receiver)
+{
+    CCMessageManager::defaultManager()->dispatchMessageWithType(type,this,receiver);
+}
+
 void GameEntity::cleanupMessages()
 {
     CCMessageManager::defaultManager()->removeReceiver(this);
@@ -76,5 +93,20 @@ void GameEntity::setupComponents()
 //    CCLOG("addComponent component named %s",name);
 //    m_components->setObject(component, name);
 //}
+
+
+void GameEntity::setHp(int hp)
+{
+    if(hp<=0){
+        hp=0;
+        sendMessage(DIE,NULL);
+    }
+    m_hp=hp;
+}
+
+int GameEntity::getHp()
+{
+    return m_hp;
+}
 
 NS_CC_END

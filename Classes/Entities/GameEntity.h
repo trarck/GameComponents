@@ -25,6 +25,9 @@ public:
     void registerMessage(MessageType type,SEL_MessageHandler handle , CCObject* sender);
     void unregisterMessage(MessageType type ,SEL_MessageHandler handle ,CCObject* sender);
     void sendMessage(MessageType type ,CCObject* receiver ,CCDictionary* data);
+    void sendMessage(MessageType type ,CCObject* receiver ,CCObject* data);
+    void sendMessage(MessageType type ,CCObject* receiver);
+    
 	void cleanupMessages();
     
     //components
@@ -37,9 +40,18 @@ public:
         CCLOG("addComponent component named %s",name);
         m_components->setObject(component, name);
     };
+    Component* getComponent(const char *name){
+        return (Component*) m_components->objectForKey(name);
+    };
+
+    void setHp(int hp);
+    int getHp();
+    
 protected:
 	int m_guid;//game object id
     CCDictionary* m_components;
+    
+    unsigned int m_hp;
 };
 
 NS_CC_END

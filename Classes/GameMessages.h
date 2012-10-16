@@ -15,6 +15,7 @@ enum GameMessage
     ALL=0,
     //attack
     ATTACK=10,
+    SET_ATTACK_TARGET,
     DIE=20
 };
 
