@@ -28,9 +28,14 @@ void AttackComponent::handleMessage(CCMessage *message)
     CCLOG("AttackComponent::handleMessage");
     CCLOG("get message %d",message->getType());
 
+    GameEntity* target;
 	switch(message->getType()){
 		
 		case ATTACK:
+            target=(GameEntity*)message->getObjectData();
+            if(target){
+                setTarget(target);
+            }
 			attack();
 			break;
 		case DIE:
@@ -63,11 +68,14 @@ void AttackComponent::cleanupMessages()
 
 void AttackComponent::attack()
 {
-    CCLOG("AttackComponent::startAttack");
-    int targetHp=m_target->getHp();
-    CCLOG("current target hp %d after attack %d",targetHp,targetHp-1);
-    m_target->setHp(targetHp-1);
-
+    if(m_target){
+        CCLOG("AttackComponent::startAttack");
+        int targetHp=m_target->getHp();
+        CCLOG("current target hp %d after attack %d",targetHp,targetHp-1);
+        m_target->setHp(targetHp-1);
+    }else {
+        CCLOG("AttackComponent::startAttack no target");
+    }
 }
 
 
@@ -83,6 +91,11 @@ void AttackComponent::attackWithSkillId(int skillId)
 void AttackComponent::didTargetDie()
 {
     CCLOG("target is die");
+    
+    //remove message
+    CCMessageManager::defaultManager()->removeReceiver(this, DIE, m_target, message_selector(AttackComponent::handleMessage));
+    CC_SAFE_RELEASE(m_target);
+    m_target=NULL;
 }
 
 GameEntity* AttackComponent::getTarget()
@@ -92,11 +105,14 @@ GameEntity* AttackComponent::getTarget()
 
 void AttackComponent::setTarget(GameEntity* target)
 {
-    CC_SAFE_RETAIN(target);
-    CC_SAFE_RELEASE(m_target);
-    m_target=target;
+    if(target!=m_target){
+        CCMessageManager::defaultManager()->removeReceiver(this, DIE, m_target, message_selector(AttackComponent::handleMessage));
+        CC_SAFE_RETAIN(target);
+        CC_SAFE_RELEASE(m_target);
+        m_target=target;
 
-	CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), DIE, m_target);
+        CCMessageManager::defaultManager()->registerReceiver(this, message_selector(AttackComponent::handleMessage), DIE, m_target);
+    }
 }
 
 NS_CC_END

@@ -59,11 +59,17 @@ bool HelloWorld::init()
     GameEntity* target=new GameEntity();
     target->setHp(10);
     
-    player->sendMessage(SET_ATTACK_TARGET, NULL, target);
+//    player->sendMessage(SET_ATTACK_TARGET, NULL, target);
     
     CCLOG("send attack message");
     
-    CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player);
+    CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player,target);
+    
+    CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player,target);
+    
+    for(int i=0;i<10;i++){
+        CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player);
+    }
     
 //    AttackComponent* attackComponent=(AttackComponent*)player->getComponent("AttackComponent");
     
