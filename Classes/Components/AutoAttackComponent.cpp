@@ -25,13 +25,36 @@ bool AutoAttackComponent::init()
 
 void AutoAttackComponent::handleMessage(CCMessage *message)
 {
-    AttackComponent::handleMessage(message);
+        
+    GameEntity* target;
+    
+    switch(message->getType()){
+            
+		case AUTO_ATTACK:
+            target=(GameEntity*)message->getObjectData();
+            if(target){
+                setTarget(target);
+            }
+			attack();
+			break;
+        default:
+            AttackComponent::handleMessage(message);
+            break;
+	}
+
 }
 
 bool AutoAttackComponent::registerMessages()
 {
     
-    return AttackComponent::registerMessages();
+//    bool ret= AttackComponent::registerMessages();
+    
+    CCMessageManager::defaultManager()->registerReceiver(m_owner, message_selector(AttackComponent::handleMessage), SET_ATTACK_TARGET, NULL,this);
+    
+    CCMessageManager::defaultManager()->registerReceiver(m_owner, message_selector(AttackComponent::handleMessage), AUTO_ATTACK, NULL,this);
+
+    
+    return true;
 
 }
 

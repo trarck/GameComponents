@@ -22,74 +22,74 @@ bool AnimationComponent::init()
 	return true;
 }
 
-bool initWithConfigFile(const std::string& file)
+bool AnimationComponent::initWithFile(const std::string& file)
 {
 	init();
 	return true;
 }
 
--(id) initWithConfigData(CCDictionary* data)
+bool AnimationComponent::initWithData(CCDictionary* data)
 {
 	init();
 	return true;
 }
 
-CCObject* animationForName(const std::string& name)
+CCObject* AnimationComponent::animationForName(const std::string& name)
 {
 	return m_animations->objectForKey(name);
 }
 
-CCAction* actionForName(const std::string& name)
+CCAction* AnimationComponent::actionForName(const std::string& name)
 {
-	return m_animations->objectForKey(name);
+	return (CCAction*) m_animations->objectForKey(name);
 }
 
-CCAction* actionForName(const std::string& name ,int index)
+CCAction* AnimationComponent::actionForName(const std::string& name ,int index)
 {
-	return ((CCArray*)(m_animations->objectForKey(name)))->objectAtIndex(index);
+	return (CCAction*)((CCArray*)(m_animations->objectForKey(name)))->objectAtIndex(index);
 }
 
-CCAction* actionForName(const std::string& name ,const std::string& key)
+CCAction* AnimationComponent::actionForName(const std::string& name ,const std::string& key)
 {
-	return ((CCDictionary*)(m_animations->objectForKey(name)))->objectForKey(key);
+	return (CCAction*)((CCDictionary*)(m_animations->objectForKey(name)))->objectForKey(key);
 }
 
-CCArray* actionListForName(const std::string& name)
+CCArray* AnimationComponent::actionListForName(const std::string& name)
 {
 	return (CCArray*)(m_animations->objectForKey(name));
 }
 
-CCDictionary* actionMapForName(const std::string& name)
+CCDictionary* AnimationComponent::actionMapForName(const std::string& name)
 {
 	return (CCDictionary*)m_animations->objectForKey(name);
 }
 
-void addAnimation(CCObject* animation,const std::string&  name)
+void AnimationComponent::addAnimation(CCObject* animation,const std::string&  name)
 {
 	m_animations->setObject(animation ,name);
 }
 
-void addAction(CCAction* action ,const std::string& name)
+void AnimationComponent::addAction(CCAction* action ,const std::string& name)
 {
 	m_animations->setObject(action ,name);
 }
 
-void addActionList(CCArray* actionList ,const std::string& name)
+void AnimationComponent::addActionList(CCArray* actionList ,const std::string& name)
 {
 	m_animations->setObject(actionList ,name);
 }
 
-void addActionMap(CCDictionary* actionMap ,const std::string& name)
+void AnimationComponent::addActionMap(CCDictionary* actionMap ,const std::string& name)
 {
 	m_animations->setObject(actionMap ,name);
 }
 
-void removeAnimationNamed(const std::string& name)
+void AnimationComponent::removeAnimationNamed(const std::string& name)
 {
 	m_animations->removeObjectForKey(name);
 }
 
-CCArray* eightDirectionActionListWithFile(const char* file ,int frameCount ,CCSize frameSize ,float delay)
+CCArray* AnimationComponent::eightDirectionActionListWithFile(const char* file ,int frameCount ,CCSize frameSize ,float delay)
 {
 	CCTexture2D *texture=CCTextureCache::sharedTextureCache()->addImage(file);
 	
@@ -105,14 +105,13 @@ CCArray* eightDirectionActionListWithFile(const char* file ,int frameCount ,CCSi
 		}
 		CCAnimation *animation=CCAnimation::createWithSpriteFrames(animFrames,delay);
 		CCAnimate *animate= CCAnimate::create(animation);
-		CCSequence *seq=CCSequence::create(animate,NULL);
-		actions->addObject(CCRepeatForever::create(seq));
+		actions->addObject(CCRepeatForever::create((CCActionInterval*)CCSequence::create(animate,NULL)));
 		animFrames->release();
 	}
 	return actions;
 }
 
-CCArray* eightDirectionActionListWithDir(const char* dir ,int frameCount ,CCSize frameSize ,float delay)
+CCArray* AnimationComponent::eightDirectionActionListWithDir(const char* dir ,int frameCount ,CCSize frameSize ,float delay)
 {
 	CCArray *actions=new CCArray();
 	actions->initWithCapacity(8);

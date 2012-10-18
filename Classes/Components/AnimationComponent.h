@@ -2,6 +2,8 @@
 #define __AnimationComponent_H__
 
 #include "cocos2d.h"
+#include "Component.h"
+#include "GameEntity.h"
 
 NS_CC_BEGIN
 
@@ -12,8 +14,7 @@ public:
 	~AnimationComponent();
 	//extend from parent
 	virtual bool init();  
-	virtual CCObject* getOwner();
-	virtual setOwner(CCObject* owner);
+
 	//for myself
 	CCAction* moveAction();
 	void moveActoin(CCAction* action);
@@ -24,7 +25,8 @@ public:
 	CCDictionary* animations();
 	void animations(CCDictionary* animations);
 
-	bool initWithConfigFile(const std::string&  file);
+	bool initWithFile(const std::string&  file);
+    bool initWithData(CCDictionary* data);
 
 	CCObject* animationForName(const std::string& name);
 	CCAction* actionForName(const std::string& name);
@@ -42,7 +44,7 @@ public:
 
 	static CCArray* eightDirectionActionListWithFile(const char* file ,int frameCount ,CCSize frameSize ,float delay);
 	static CCArray* eightDirectionActionListWithDir(const char* file ,int frameCount ,CCSize frameSize ,float delay);
-private:
+protected:
 	CCDictionary* m_animations;
 };
 

@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "AttackComponent.h"
 #include "GameMessages.h"
+#include "AutoAttackComponent.h"
 
 NS_CC_BEGIN
 
@@ -34,6 +35,15 @@ void Player::setupComponents()
    
     attackComponent->release();
     CCLOG("attackComponent count=%d",attackComponent->retainCount());
+    
+    //auto attack
+    AutoAttackComponent* autoAttackComponent=new AutoAttackComponent();
+    autoAttackComponent->init();
+    autoAttackComponent->setOwner(this);
+    autoAttackComponent->registerMessages();
+    addComponent(autoAttackComponent);
+    autoAttackComponent->release();
+
 }
 
 NS_CC_END

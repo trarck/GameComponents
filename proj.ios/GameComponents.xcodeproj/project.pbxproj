@@ -39,6 +39,7 @@
 		5763C2E01608570A0068D420 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5763C2801608570A0068D420 /* CocosDenshion.m */; };
 		5763C2E11608570A0068D420 /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5763C2811608570A0068D420 /* SimpleAudioEngine.mm */; };
 		5763C2E21608570A0068D420 /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5763C2831608570A0068D420 /* SimpleAudioEngine_objc.m */; };
+		578747431630083D002A6E3F /* AnimationComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 578747411630083D002A6E3F /* AnimationComponent.cpp */; };
 		5791DDD81609703E00D996E9 /* AttackComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDD31609703E00D996E9 /* AttackComponent.cpp */; };
 		5791DDD91609703E00D996E9 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDD51609703E00D996E9 /* Component.cpp */; };
 		5791DDE5160982EE00D996E9 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDE3160982EE00D996E9 /* Player.cpp */; };
@@ -118,6 +119,8 @@
 		5763C2811608570A0068D420 /* SimpleAudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleAudioEngine.mm; sourceTree = "<group>"; };
 		5763C2821608570A0068D420 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		5763C2831608570A0068D420 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
+		578747411630083D002A6E3F /* AnimationComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationComponent.cpp; sourceTree = "<group>"; };
+		578747421630083D002A6E3F /* AnimationComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationComponent.h; sourceTree = "<group>"; };
 		5791DDD31609703E00D996E9 /* AttackComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttackComponent.cpp; sourceTree = "<group>"; };
 		5791DDD41609703E00D996E9 /* AttackComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackComponent.h; sourceTree = "<group>"; };
 		5791DDD51609703E00D996E9 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 		5791DDD01609703E00D996E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				578747411630083D002A6E3F /* AnimationComponent.cpp */,
+				578747421630083D002A6E3F /* AnimationComponent.h */,
 				5758424A162D39A0008DA210 /* ManualAttackComponent.cpp */,
 				5758424B162D39A0008DA210 /* ManualAttackComponent.h */,
 				57584247162D3884008DA210 /* AutoAttackComponent.cpp */,
@@ -464,6 +469,7 @@
 				57584246162D1B85008DA210 /* Monster.cpp in Sources */,
 				57584249162D3884008DA210 /* AutoAttackComponent.cpp in Sources */,
 				5758424C162D39A0008DA210 /* ManualAttackComponent.cpp in Sources */,
+				578747431630083D002A6E3F /* AnimationComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,8 @@
 #include "CCMessageManager.h"
 #include "AttackComponent.h"
 
+#include "AutoAttackComponent.h"
+
 using namespace cocos2d;
 using namespace CocosDenshion;
 
