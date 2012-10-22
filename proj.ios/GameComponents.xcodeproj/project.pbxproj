@@ -50,6 +50,7 @@
 		5791DDF816098BC800D996E9 /* CCNormalMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDF016098BC800D996E9 /* CCNormalMessageManager.cpp */; };
 		5791DDF916098BC800D996E9 /* CCSimpleMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDF216098BC800D996E9 /* CCSimpleMessageManager.cpp */; };
 		5791DE181609B7AE00D996E9 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5791DDE0160982C200D996E9 /* GameEntity.cpp */; };
+		57B0C70C16353F400002A0CD /* characters in Resources */ = {isa = PBXBuildFile; fileRef = 57B0C70B16353F400002A0CD /* characters */; };
 		57CAC2261609CC2600B21CC3 /* GameEntity2.h in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC2251609CC2600B21CC3 /* GameEntity2.h */; };
 		57CAC22B1609DF0700B21CC3 /* CCSpecMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */; };
 /* End PBXBuildFile section */
@@ -146,6 +147,7 @@
 		5791DE141609935600D996E9 /* GameMessages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMessages.h; sourceTree = "<group>"; };
 		5791DE151609A30F00D996E9 /* ComponentEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentEntity.h; sourceTree = "<group>"; };
 		5791DE161609A37B00D996E9 /* ComponentEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComponentEntity.cpp; sourceTree = "<group>"; };
+		57B0C70B16353F400002A0CD /* characters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = characters; sourceTree = "<group>"; };
 		57CAC2251609CC2600B21CC3 /* GameEntity2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntity2.h; sourceTree = "<group>"; };
 		57CAC2271609CC4D00B21CC3 /* GameEntity2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEntity2.cpp; sourceTree = "<group>"; };
 		57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSpecMessageManager.cpp; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		5763C24B160856E20068D420 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				57B0C70B16353F400002A0CD /* characters */,
 				5763C24C160856E20068D420 /* CloseNormal.png */,
 				5763C24D160856E20068D420 /* CloseSelected.png */,
 				5763C24E160856E20068D420 /* Default.png */,
@@ -435,6 +438,7 @@
 				5763C25E160856E20068D420 /* Icon.png in Resources */,
 				5763C25F160856E20068D420 /* Icon@2x.png in Resources */,
 				57CAC2261609CC2600B21CC3 /* GameEntity2.h in Resources */,
+				57B0C70C16353F400002A0CD /* characters in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

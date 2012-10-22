@@ -13,11 +13,13 @@
 enum GameMessage
 {
     ALL=0,
+    ANIMATION,
+    CHANGE_ANIMATION,
     //attack
-    ATTACK=10,
-    SET_ATTACK_TARGET=11,
-    AUTO_ATTACK=12,
-    DIE=20
+    ATTACK,
+    SET_ATTACK_TARGET,
+    AUTO_ATTACK,
+    DIE
 };
 
 

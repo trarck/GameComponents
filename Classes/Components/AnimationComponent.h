@@ -14,6 +14,12 @@ public:
 	~AnimationComponent();
 	//extend from parent
 	virtual bool init();  
+    
+    
+    virtual bool registerMessages();
+    virtual void handleMessage(CCMessage* message);
+    virtual void cleanupMessages();
+    
 
 	//for myself
 	CCAction* moveAction();
@@ -43,7 +49,7 @@ public:
 	void removeAnimationNamed(const std::string& name);
 
 	static CCArray* eightDirectionActionListWithFile(const char* file ,int frameCount ,CCSize frameSize ,float delay);
-	static CCArray* eightDirectionActionListWithDir(const char* file ,int frameCount ,CCSize frameSize ,float delay);
+	static CCArray* eightDirectionActionListWithDir(const char* dir ,int frameCount ,CCSize frameSize ,float delay,const char* pathFormat);
 protected:
 	CCDictionary* m_animations;
 };

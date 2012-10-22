@@ -34,6 +34,8 @@ bool HelloWorld::init()
     {
         return false;
     }
+    
+    CCSize screenSize= CCDirector::sharedDirector()->getWinSize();
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -45,7 +47,7 @@ bool HelloWorld::init()
                                         "CloseSelected.png",
                                         this,
                                         menu_selector(HelloWorld::menuCloseCallback) );
-    pCloseItem->setPosition( ccp(CCDirector::sharedDirector()->getWinSize().width - 20, 20) );
+    pCloseItem->setPosition( ccp(screenSize.width - 20, 20) );
 
     // create menu, it's an autorelease object
     CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
@@ -55,8 +57,25 @@ bool HelloWorld::init()
     /////////////////////////////
     // 3. add your codes below...
     Player* player=new Player();
+    CCLOG("player count=%d",player->retainCount());
     player->init();
+    CCLOG("player count=%d",player->retainCount());
     player->setupComponents();
+    CCLOG("player count=%d",player->retainCount());
+    
+    player->setPosition(ccp(screenSize.width/2, screenSize.height/2));
+    
+//    this->addChild(player->view());
+    this->addChild(player);
+    
+    CCDictionary* data=new CCDictionary();
+    data->setObject(CCString::create("idle"), "name");
+    data->setObject(CCInteger::create(0), "direction");
+    
+    CCLOG("set begin action");
+    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, player,data);
+    CCLOG("set begin action after");
+    
     
     GameEntity* target=new GameEntity();
     target->setHp(10);
@@ -69,15 +88,17 @@ bool HelloWorld::init()
     
     CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player,target);
     
-    for(int i=0;i<10;i++){
+    for(int i=0;i<1;i++){
         CCMessageManager::defaultManager()->dispatchMessageWithType(ATTACK, NULL, player);
     }
     
 //    AttackComponent* attackComponent=(AttackComponent*)player->getComponent("AttackComponent");
     
     target->release();
-    player->cleanupMessages();
     player->release();
+    
+//    player->removeFromParentAndCleanup(true);
+
     
 //    CCLOG("attackComponent count=%d",attackComponent->retainCount());
     return true;
@@ -85,6 +106,7 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
+    this->removeAllChildrenWithCleanup(true);
     CCDirector::sharedDirector()->end();
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)

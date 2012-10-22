@@ -10,7 +10,7 @@ NS_CC_BEGIN
 
 //class Component;
 
-class GameEntity : public CCObject {
+class GameEntity : public CCSprite {
 public:
     
     GameEntity();
@@ -22,13 +22,17 @@ public:
     int guid();
     void guid(int guid);
     
+    virtual CCSprite* view();
+    virtual void view(CCSprite* view);
+    
     void registerMessage(MessageType type,SEL_MessageHandler handle , CCObject* sender);
     void unregisterMessage(MessageType type ,SEL_MessageHandler handle ,CCObject* sender);
-    void sendMessage(MessageType type ,CCObject* receiver ,CCDictionary* data);
+//    void sendMessage(MessageType type ,CCObject* receiver ,CCDictionary* data);
     void sendMessage(MessageType type ,CCObject* receiver ,CCObject* data);
     void sendMessage(MessageType type ,CCObject* receiver);
     
 	void cleanupMessages();
+    virtual void cleanup();
     
     //components
     virtual void setupComponents();
@@ -52,6 +56,8 @@ protected:
     CCDictionary* m_components;
     
     unsigned int m_hp;
+    
+//    CCSprite* m_view;
 };
 
 NS_CC_END

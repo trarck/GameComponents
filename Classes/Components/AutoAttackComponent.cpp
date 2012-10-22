@@ -31,7 +31,7 @@ void AutoAttackComponent::handleMessage(CCMessage *message)
     switch(message->getType()){
             
 		case AUTO_ATTACK:
-            target=(GameEntity*)message->getObjectData();
+            target=(GameEntity*)message->getData();
             if(target){
                 setTarget(target);
             }

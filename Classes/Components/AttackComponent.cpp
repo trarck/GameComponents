@@ -32,7 +32,7 @@ void AttackComponent::handleMessage(CCMessage *message)
 	switch(message->getType()){
 		
 		case ATTACK:
-            target=(GameEntity*)message->getObjectData();
+            target=(GameEntity*)message->getData();
             if(target){
                 setTarget(target);
             }
@@ -42,7 +42,7 @@ void AttackComponent::handleMessage(CCMessage *message)
             didTargetDie();
 			break;
         case SET_ATTACK_TARGET:
-            setTarget((GameEntity*)message->getObjectData());
+            setTarget((GameEntity*)message->getData());
             break;
 
 	}
