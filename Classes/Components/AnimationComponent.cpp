@@ -1,12 +1,14 @@
 #include "AnimationComponent.h"
 #include "CCMessageManager.h"
 #include "GameMessages.h"
+#include "GameEntity.h"
 
 
 NS_CC_BEGIN
 
 AnimationComponent::AnimationComponent()
 :m_animations(NULL)
+,m_lastAction(NULL)
 {
 	CCLOG("AnimationComponent create");
 }
@@ -16,6 +18,7 @@ AnimationComponent::~AnimationComponent()
 	CCLOG("AnimationComponent destroy");
 
 	CC_SAFE_RELEASE(m_animations);
+    CC_SAFE_RELEASE(m_lastAction);
 }
 
 
@@ -37,6 +40,18 @@ bool AnimationComponent::initWithData(CCDictionary* data)
 	return true;
 }
 
+CCAction* AnimationComponent::getLastAction()
+{
+    return m_lastAction;
+}
+
+void AnimationComponent::setLastAction(CCAction* action)
+{
+    CC_SAFE_RETAIN(action);
+    CC_SAFE_RELEASE(m_lastAction);
+    m_lastAction=action;
+}
+
 
 void AnimationComponent::handleMessage(CCMessage *message)
 {
@@ -47,19 +62,26 @@ void AnimationComponent::handleMessage(CCMessage *message)
 	switch(message->getType()){
             
 		case CHANGE_ANIMATION:
+        {
             CCDictionary* data=message->getDictionary();
             
             CCString* animationName=(CCString*)data->objectForKey("name");
             int direction=((CCInteger*) data->objectForKey("direction"))->getValue();
             
             CCAction* action=(CCAction*)actionForName(animationName->getCString(),direction);
-            if(action){
+            if(action && m_lastAction!=action){
 //                ((GameEntity*)m_owner)->view()->runAction(action);
-                 ((GameEntity*)m_owner)->runAction(action);
+                GameEntity* owner=(GameEntity*) m_owner;
+                owner->stopAction(m_lastAction);
+                owner->runAction(action);
+//                m_lastAction=action;
+                setLastAction(action);
             }else {
                 CCLOG("unknow animation name %s",animationName);
             }
             break;
+        }
+            
          
 	}
 }

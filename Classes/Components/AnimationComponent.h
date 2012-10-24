@@ -3,7 +3,6 @@
 
 #include "cocos2d.h"
 #include "Component.h"
-#include "GameEntity.h"
 
 NS_CC_BEGIN
 
@@ -15,6 +14,8 @@ public:
 	//extend from parent
 	virtual bool init();  
     
+    CCAction* getLastAction();
+    void setLastAction(CCAction* action);
     
     virtual bool registerMessages();
     virtual void handleMessage(CCMessage* message);
@@ -52,6 +53,8 @@ public:
 	static CCArray* eightDirectionActionListWithDir(const char* dir ,int frameCount ,CCSize frameSize ,float delay,const char* pathFormat);
 protected:
 	CCDictionary* m_animations;
+    
+    CCAction* m_lastAction;
 };
 
 NS_CC_END

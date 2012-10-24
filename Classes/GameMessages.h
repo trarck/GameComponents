@@ -19,7 +19,12 @@ enum GameMessage
     ATTACK,
     SET_ATTACK_TARGET,
     AUTO_ATTACK,
-    DIE
+    DIE,
+    //move
+    MOVE_TO,
+    MOVE_DIRECTION,
+    MOVE_DIRECTION_TO,
+    MOVE_DIRECTION_STOP
 };
 
 

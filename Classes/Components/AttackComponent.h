@@ -16,7 +16,6 @@ public:
     virtual bool init();
     
     virtual bool registerMessages();
-//    virtual bool registerOwnerMessages();
     virtual void handleMessage(CCMessage* message);
     virtual void cleanupMessages();
     

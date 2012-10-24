@@ -53,6 +53,7 @@
 		57B0C70C16353F400002A0CD /* characters in Resources */ = {isa = PBXBuildFile; fileRef = 57B0C70B16353F400002A0CD /* characters */; };
 		57CAC2261609CC2600B21CC3 /* GameEntity2.h in Resources */ = {isa = PBXBuildFile; fileRef = 57CAC2251609CC2600B21CC3 /* GameEntity2.h */; };
 		57CAC22B1609DF0700B21CC3 /* CCSpecMessageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */; };
+		57FE5A401636A0ED00FCD88B /* SimpleMoveComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57FE5A3E1636A0ED00FCD88B /* SimpleMoveComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,8 @@
 		57CAC2271609CC4D00B21CC3 /* GameEntity2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEntity2.cpp; sourceTree = "<group>"; };
 		57CAC2291609DF0600B21CC3 /* CCSpecMessageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSpecMessageManager.cpp; sourceTree = "<group>"; };
 		57CAC22A1609DF0600B21CC3 /* CCSpecMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpecMessageManager.h; sourceTree = "<group>"; };
+		57FE5A3E1636A0ED00FCD88B /* SimpleMoveComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleMoveComponent.cpp; sourceTree = "<group>"; };
+		57FE5A3F1636A0ED00FCD88B /* SimpleMoveComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleMoveComponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +309,8 @@
 		5791DDD01609703E00D996E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				57FE5A3E1636A0ED00FCD88B /* SimpleMoveComponent.cpp */,
+				57FE5A3F1636A0ED00FCD88B /* SimpleMoveComponent.h */,
 				578747411630083D002A6E3F /* AnimationComponent.cpp */,
 				578747421630083D002A6E3F /* AnimationComponent.h */,
 				5758424A162D39A0008DA210 /* ManualAttackComponent.cpp */,
@@ -474,6 +479,7 @@
 				57584249162D3884008DA210 /* AutoAttackComponent.cpp in Sources */,
 				5758424C162D39A0008DA210 /* ManualAttackComponent.cpp in Sources */,
 				578747431630083D002A6E3F /* AnimationComponent.cpp in Sources */,
+				57FE5A401636A0ED00FCD88B /* SimpleMoveComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

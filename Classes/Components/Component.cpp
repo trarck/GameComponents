@@ -1,3 +1,4 @@
+#include "CCMessageManager.h"
 #include "Component.h"
 
 NS_CC_BEGIN
@@ -43,6 +44,7 @@ bool Component::registerMessages()
 void Component::cleanupMessages()
 {
     CCLOG("Component::cleanupMessages");
+    CCMessageManager::defaultManager()->removeReceiver(this);
 }
 
 CCObject* Component::getOwner()

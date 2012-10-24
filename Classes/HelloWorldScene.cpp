@@ -48,9 +48,24 @@ bool HelloWorld::init()
                                         this,
                                         menu_selector(HelloWorld::menuCloseCallback) );
     pCloseItem->setPosition( ccp(screenSize.width - 20, 20) );
-
+    
+    CCMenuItemLabel *pRunItem=CCMenuItemLabel::create(CCLabelTTF::create("run", "Arial", 12),
+                                                      this, 
+                                                      menu_selector(HelloWorld::menuRunCallback));
+    pRunItem->setPosition(ccp(screenSize.width-60,20));
+    
+    CCMenuItemLabel *pStopItem=CCMenuItemLabel::create(CCLabelTTF::create("stop", "Arial", 12),
+                                                      this, 
+                                                      menu_selector(HelloWorld::menuStopCallback));
+    pStopItem->setPosition(ccp(screenSize.width-90,20));
+    
+    CCMenuItemLabel *pMoveToItem=CCMenuItemLabel::create(CCLabelTTF::create("moveTo", "Arial", 12),
+                                                       this, 
+                                                       menu_selector(HelloWorld::menuMoveToCallback));
+    pMoveToItem->setPosition(ccp(screenSize.width-120,20));
+    
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
+    CCMenu* pMenu = CCMenu::create(pCloseItem,pRunItem,pStopItem,pMoveToItem, NULL);
     pMenu->setPosition( CCPointZero );
     this->addChild(pMenu, 1);
 
@@ -94,8 +109,11 @@ bool HelloWorld::init()
     
 //    AttackComponent* attackComponent=(AttackComponent*)player->getComponent("AttackComponent");
     
+        
     target->release();
     player->release();
+    
+    m_player=player;
     
 //    player->removeFromParentAndCleanup(true);
 
@@ -112,4 +130,52 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
+}
+
+void HelloWorld::menuRunCallback(CCObject* pSender)
+{
+    CCDictionary* data=new CCDictionary();
+    data->setObject(CCString::create("move"), "name");
+    data->setObject(CCInteger::create(3), "direction");
+    
+    CCLOG("set begin action");
+    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
+    CCLOG("set begin action after");
+    
+    CCInteger* degree=CCInteger::create(45);
+    
+    CCMessageManager::defaultManager()->dispatchMessageWithType(MOVE_DIRECTION, NULL, m_player,degree);
+
+}
+
+void HelloWorld::menuStopCallback(CCObject* pSender)
+{
+    CCDictionary* data=new CCDictionary();
+    data->setObject(CCString::create("idle"), "name");
+    data->setObject(CCInteger::create(0), "direction");
+    
+    CCLOG("set begin action");
+    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
+    CCLOG("set begin action after");
+
+    
+    CCMessageManager::defaultManager()->dispatchMessageWithType(MOVE_DIRECTION_STOP, NULL, m_player);
+}
+
+void HelloWorld::menuMoveToCallback(CCObject* pSender)
+{
+    CCDictionary* data=new CCDictionary();
+    data->setObject(CCString::create("move"), "name");
+    data->setObject(CCInteger::create(3), "direction");
+    
+    CCLOG("set begin action");
+    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
+    CCLOG("set begin action after");
+    
+    
+    CCSize screenSize= CCDirector::sharedDirector()->getWinSize();
+    CCPoint to=ccp(screenSize.width/2+50,screenSize.height/2+50);
+    
+    CCMessageManager::defaultManager()->dispatchMessageWithType(MOVE_TO, NULL, m_player,&to);
+    
 }

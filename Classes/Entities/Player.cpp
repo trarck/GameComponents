@@ -4,7 +4,7 @@
 #include "AttackComponent.h"
 #include "GameMessages.h"
 #include "AutoAttackComponent.h"
-
+#include "SimpleMoveComponent.h"
 
 NS_CC_BEGIN
 
@@ -76,6 +76,14 @@ void Player::setupComponents()
     autoAttackComponent->registerMessages();
     addComponent(autoAttackComponent);
     autoAttackComponent->release();
+    
+    
+    SimpleMoveComponent* simpleMoveComponent=new SimpleMoveComponent();
+    simpleMoveComponent->initWithSpeed(2);
+    simpleMoveComponent->setOwner(this);
+    simpleMoveComponent->registerMessages();
+    addComponent(simpleMoveComponent);
+    simpleMoveComponent->release();
 
 }
 
