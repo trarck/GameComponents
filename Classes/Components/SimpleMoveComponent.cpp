@@ -159,6 +159,7 @@ void SimpleMoveComponent::startMove()
     CCDirector* director = CCDirector::sharedDirector();
     CCScheduler* pScheduler = director->getScheduler();
     pScheduler->scheduleSelector(m_update,this, 0, false);
+    didMoveStart();
 }
 
 /**
@@ -498,6 +499,23 @@ void SimpleMoveComponent::updateDirection( float delta)
 //{
 //	
 //}
+
+/**
+ * 移动结束
+ * 由移动状态转向空闲状态
+ */
+void SimpleMoveComponent::didMoveStart()
+{
+    //todo parse direction
+    
+	CCDictionary* data=new CCDictionary();
+    data->setObject(CCString::create("move"), "name");
+    data->setObject(CCInteger::create(3), "direction");
+    
+    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_owner,data);
+    
+}
+
 /**
  * 移动结束
  * 由移动状态转向空闲状态

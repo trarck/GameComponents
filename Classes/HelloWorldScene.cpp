@@ -134,13 +134,13 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 
 void HelloWorld::menuRunCallback(CCObject* pSender)
 {
-    CCDictionary* data=new CCDictionary();
-    data->setObject(CCString::create("move"), "name");
-    data->setObject(CCInteger::create(3), "direction");
-    
-    CCLOG("set begin action");
-    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
-    CCLOG("set begin action after");
+//    CCDictionary* data=new CCDictionary();
+//    data->setObject(CCString::create("move"), "name");
+//    data->setObject(CCInteger::create(3), "direction");
+//    
+//    CCLOG("set begin action");
+//    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
+//    CCLOG("set begin action after");
     
     CCInteger* degree=CCInteger::create(45);
     
@@ -150,13 +150,13 @@ void HelloWorld::menuRunCallback(CCObject* pSender)
 
 void HelloWorld::menuStopCallback(CCObject* pSender)
 {
-    CCDictionary* data=new CCDictionary();
-    data->setObject(CCString::create("idle"), "name");
-    data->setObject(CCInteger::create(0), "direction");
-    
-    CCLOG("set begin action");
-    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
-    CCLOG("set begin action after");
+//    CCDictionary* data=new CCDictionary();
+//    data->setObject(CCString::create("idle"), "name");
+//    data->setObject(CCInteger::create(0), "direction");
+//    
+//    CCLOG("set begin action");
+//    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
+//    CCLOG("set begin action after");
 
     
     CCMessageManager::defaultManager()->dispatchMessageWithType(MOVE_DIRECTION_STOP, NULL, m_player);
@@ -164,14 +164,7 @@ void HelloWorld::menuStopCallback(CCObject* pSender)
 
 void HelloWorld::menuMoveToCallback(CCObject* pSender)
 {
-    CCDictionary* data=new CCDictionary();
-    data->setObject(CCString::create("move"), "name");
-    data->setObject(CCInteger::create(3), "direction");
-    
-    CCLOG("set begin action");
-    CCMessageManager::defaultManager()->dispatchMessageWithType(CHANGE_ANIMATION, NULL, m_player,data);
-    CCLOG("set begin action after");
-    
+   
     
     CCSize screenSize= CCDirector::sharedDirector()->getWinSize();
     CCPoint to=ccp(screenSize.width/2+50,screenSize.height/2+50);

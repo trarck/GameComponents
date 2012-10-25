@@ -89,7 +89,7 @@ public:
     void updateDirection(float delta);
 	void updatePath(float delta);
     
-    
+    void didMoveStart();
     void didMoveStop();
 	void didHit(CCPoint location);
 
