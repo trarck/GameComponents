@@ -49,20 +49,20 @@ bool HelloWorld::init()
                                         menu_selector(HelloWorld::menuCloseCallback) );
     pCloseItem->setPosition( ccp(screenSize.width - 20, 20) );
     
-    CCMenuItemLabel *pRunItem=CCMenuItemLabel::create(CCLabelTTF::create("run", "Arial", 12),
+    CCMenuItemLabel *pRunItem=CCMenuItemLabel::create(CCLabelTTF::create("run", "Arial", 20),
                                                       this, 
                                                       menu_selector(HelloWorld::menuRunCallback));
-    pRunItem->setPosition(ccp(screenSize.width-60,20));
+    pRunItem->setPosition(ccp(screenSize.width-100,20));
     
-    CCMenuItemLabel *pStopItem=CCMenuItemLabel::create(CCLabelTTF::create("stop", "Arial", 12),
+    CCMenuItemLabel *pStopItem=CCMenuItemLabel::create(CCLabelTTF::create("stop", "Arial", 20),
                                                       this, 
                                                       menu_selector(HelloWorld::menuStopCallback));
-    pStopItem->setPosition(ccp(screenSize.width-90,20));
+    pStopItem->setPosition(ccp(screenSize.width-200,20));
     
-    CCMenuItemLabel *pMoveToItem=CCMenuItemLabel::create(CCLabelTTF::create("moveTo", "Arial", 12),
+    CCMenuItemLabel *pMoveToItem=CCMenuItemLabel::create(CCLabelTTF::create("moveTo", "Arial", 20),
                                                        this, 
                                                        menu_selector(HelloWorld::menuMoveToCallback));
-    pMoveToItem->setPosition(ccp(screenSize.width-120,20));
+    pMoveToItem->setPosition(ccp(screenSize.width-300,20));
     
     // create menu, it's an autorelease object
     CCMenu* pMenu = CCMenu::create(pCloseItem,pRunItem,pStopItem,pMoveToItem, NULL);
