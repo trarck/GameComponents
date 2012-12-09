@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{b05f61dd-dc90-4294-807d-e43fa51128d9}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{a7b33c8d-105a-4ff2-9143-025575fd694f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{9aae6b88-339c-4e3f-8934-e593183c4be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Components">
+      <UniqueIdentifier>{d3c98eee-d775-411e-ae9f-1908d41db1ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Entities">
+      <UniqueIdentifier>{64028d30-63ff-4cf0-abe7-1902052a140f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Message">
+      <UniqueIdentifier>{b84c6d4b-5ed7-48f1-ac94-9b074f9f72b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\characters">
+      <UniqueIdentifier>{ee1d236d-5eca-4ac6-b6b0-1f312b70cad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\characters\2">
+      <UniqueIdentifier>{c533347e-f408-4027-b47a-34242c12d74a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\characters\3">
+      <UniqueIdentifier>{d33e77f7-6e0e-444c-85a2-f1dbaa7a334a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\characters\2\0">
+      <UniqueIdentifier>{28f151ea-43e2-4805-b55b-1188cdd8095f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GameComponents.ico">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\CloseSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\CloseNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\HelloWorld.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Default.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fps_images.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fps_images-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\fps_images-ipadhd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Icon.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Icon%402x.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Icon-72.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Icon-Small.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Icon-Small%402x.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\Icon-Small-50.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\characters\1.png">
+      <Filter>resource\characters</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\01009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\02009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\03009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\04009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\05009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\06009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07006.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07007.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07008.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\07009.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00000.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00001.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00002.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00003.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00004.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+    <None Include="..\Resources\characters\2\0\00005.png">
+      <Filter>resource\characters\2\0</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameComponents.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\AnimationComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\AttackComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\AutoAttackComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\Component.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\ComponentEntity.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\ManualAttackComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Components\SimpleMoveComponent.cpp">
+      <Filter>Classes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities\GameEntity.cpp">
+      <Filter>Classes\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities\Monster.cpp">
+      <Filter>Classes\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities\Player.cpp">
+      <Filter>Classes\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Message\CCMessage.cpp">
+      <Filter>Classes\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Message\CCMessageHandler.cpp">
+      <Filter>Classes\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Message\CCMessageManager.cpp">
+      <Filter>Classes\Message</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameMessages.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\YHMacros.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\AnimationComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\AttackComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\AutoAttackComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\Component.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\ComponentEntity.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\ManualAttackComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Components\SimpleMoveComponent.h">
+      <Filter>Classes\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entities\GameEntity.h">
+      <Filter>Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entities\Monster.h">
+      <Filter>Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entities\Player.h">
+      <Filter>Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Message\CCMessage.h">
+      <Filter>Classes\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Message\CCMessageHandler.h">
+      <Filter>Classes\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Message\CCMessageManager.h">
+      <Filter>Classes\Message</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
